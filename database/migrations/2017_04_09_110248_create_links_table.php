@@ -14,7 +14,7 @@ class CreateLinksTable extends Migration
     public function up()
     {
         Schema::create('links', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('original_url')->unique();
             $table->string('code')->nullable()->unique();
             $table->integer('requested_count')->default(0);

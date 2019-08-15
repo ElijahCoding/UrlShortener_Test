@@ -1,6 +1,5 @@
 <?php
 
-
-$router->get('/', function () use ($router) {
-    return $router->app->version();
-});
+$app->post('/', 'LinkController@store');
+$app->get('/', 'LinkController@show');
+$app->get('/stats', 'LinkStatsController@show');
